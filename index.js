@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post('/proxy-n8n', async (req, res) => {
   try {
-    const response = await fetch('https://n8n-service-abc1.onrender.com/webhook/quiz-GessicaCorti', {
+    const response = await fetch('https://n8n-service-abc1.onrender.com/webhook/quizgessica', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
@@ -19,6 +19,7 @@ app.post('/proxy-n8n', async (req, res) => {
     res.status(500).send('Erro ao enviar para n8n');
   }
 });
+
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
