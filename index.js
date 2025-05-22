@@ -8,7 +8,7 @@ app.use(express.json());
 
 app.post('/proxy-n8n', async (req, res) => {
   try {
-    const response = await fetch('https://n8n-service-abc1.onrender.com/webhook/quizgessica', {
+    const response = await fetch('https://apiryan.reffix.com.br/webhook/quizGessica', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(req.body)
